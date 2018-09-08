@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180908204932) do
+ActiveRecord::Schema.define(version: 20180908211959) do
 
   create_table "collections", force: :cascade do |t|
     t.string   "name"
@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 20180908204932) do
     t.string   "author"
     t.string   "content"
     t.integer  "post_id"
-    t.integer  "collection_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "items", force: :cascade do |t|
@@ -43,6 +43,16 @@ ActiveRecord::Schema.define(version: 20180908204932) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "author"
+    t.string   "content"
+    t.integer  "rating"
+    t.integer  "collection_id"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|

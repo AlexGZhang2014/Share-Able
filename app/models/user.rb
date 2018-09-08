@@ -4,4 +4,5 @@ class User < ApplicationRecord
   has_many :comments
   has_many :collections
   has_many :items, through: :collections
+  has_many :reviews
 end
