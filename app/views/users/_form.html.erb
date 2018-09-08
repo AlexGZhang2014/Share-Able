@@ -1,0 +1,12 @@
+<%= form_for user do |u| %>
+  <%= u.label :username %>
+  <%= u.text_field :username %>
+  <br>
+  <%= u.label :email %>
+  <%= u.text_field :email %>
+  <br>
+  <%= u.label :password %>
+  <%= u.password_field :password %>
+  <br>
+  <%= u.submit "Sign Up" %>
+<% end %>
