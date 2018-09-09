@@ -4,6 +4,10 @@
 <h1><%= @collection.name %></h1>
 <h4>Submitted by: <%= @collection.user.username %></h4>
 <p><%= @collection.description %></p>
+<h3>Items:</h3>
+<% @items.each do |item| %>
+  <h4><%= item.name %></h4>
+<% end %>
 <br>
 <% if @current_user == @collection.user %>
   <%= button_to "Edit this collection", { action: "edit", id: @collection.id }, method: :get %>
