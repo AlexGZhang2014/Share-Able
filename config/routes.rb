@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   post "/logout" => "sessions#destroy"
   resources :reviews
   resources :items
-  resources :collections
+  resources :collections do
+    resources :items, only: [:new, :edit, :show]
+  end
   resources :comments
   resources :posts
   resources :users do
