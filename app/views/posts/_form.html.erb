@@ -9,10 +9,12 @@
   </div>
 <% end %>
 <%= form_for post do |p| %>
-  <%= p.label :title %>
+  <%= p.hidden_field :user_id %>
+
+  <%= p.label :title %><br>
   <%= p.text_field :title %>
-  <br>
-  <%= p.label :content %>
+  <br><br>
+  <%= p.label :content %><br>
   <%= p.text_area :content %>
   <br><br>
   <%= p.submit %>
