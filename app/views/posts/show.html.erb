@@ -1,0 +1,7 @@
+<h1><%= @post.title %></h1>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<p><%= @post.content %></p>
+<br>
+<p><%= link_to "Click here", posts_path %> to return to your posts feed.</p>
