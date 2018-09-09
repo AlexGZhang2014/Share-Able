@@ -6,7 +6,8 @@
 <p><%= @post.content %></p>
 <br>
 <% if @current_user == @post.user %>
-  <p><%= link_to "Edit this post", edit_post_path %></p>
+  <%= button_to "Edit this post", { action: "edit", id: @post.id }, method: :get %>
+  <br>
   <%= button_to "Delete this post", { action: "destroy", id: @post.id }, method: :delete, data: { confirm: "Are you sure?" } %>
 <% end %>
 <p><%= link_to "Click here", posts_path %> to return to your posts feed.</p>
