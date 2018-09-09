@@ -1,8 +1,8 @@
 <h1>Your Posts Feed!</h1>
-<p><%= link_to "Create a new post", new_post_path %></p>
-<ul>
-  <% @posts.each do |post| %>
-    <li><%= link_to post.title, post_path(post) %></li>
-  <% end %>
-</ul>
+<p><%= link_to "Create a new post", new_user_post_path(@current_user) %></p>
+<% @posts.each do |post| %>
+  <h4><%= link_to post.title, post_path(post) %></h4>
+  <h5>Submitted by: <%= post.user.username %></h5>
+  <p><%= post.content %></p>
+<% end %>
 <%= button_to "Log out", logout_path %>
