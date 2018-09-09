@@ -10,8 +10,7 @@ class ApplicationController < ActionController::Base
     end
 
     def require_login
-      redirect_to root_path unless logged_in?
-      flash[:notice] = "Sorry, but you must be logged in first to view that page."
+      redirect_to root_path, notice: "Sorry, but you must be logged in first to view that page." unless logged_in?
     end
 
     def current_user
