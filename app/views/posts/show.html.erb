@@ -5,4 +5,7 @@
 <h4>Submitted by: <%= @post.user.username %></h4>
 <p><%= @post.content %></p>
 <br>
+<% if @current_user == @post.user %>
+  <p><%= link_to "Edit this post", edit_post_path %></p>
+<% end %>
 <p><%= link_to "Click here", posts_path %> to return to your posts feed.</p>
