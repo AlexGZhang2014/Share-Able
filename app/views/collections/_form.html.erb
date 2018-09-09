@@ -8,14 +8,14 @@
     </ul>
   </div>
 <% end %>
-<%= form_for collection do |p| %>
-  <%= p.hidden_field :user_id %>
+<%= form_for collection do |c| %>
+  <%= c.hidden_field :user_id %>
 
-  <%= p.label :name %><br>
-  <%= p.text_field :name %>
+  <%= c.label :name %><br>
+  <%= c.text_field :name %>
   <br><br>
-  <%= p.label :description %><br>
-  <%= p.text_area :description %>
+  <%= c.label :description %><br>
+  <%= c.text_area :description %>
   <br><br>
-  <%= p.submit %>
+  <%= c.submit %>
 <% end %>
