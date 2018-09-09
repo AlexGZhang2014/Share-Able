@@ -1,2 +1,9 @@
 <h1>Edit your collection</h1>
 <%= render partial: "form", locals: { collection: @collection } %>
+<br>
+<h3>Items:</h3>
+<% @items.each do |item| %>
+  <h4><%= item.name %></h4>
+<% end %>
+<br>
+<%= button_to "Add item", new_collection_item_path(@collection), method: :get %>
