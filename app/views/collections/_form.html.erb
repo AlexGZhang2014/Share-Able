@@ -1,0 +1,21 @@
+<% if collection.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(collection.errors.count, "error") %> prevented you from creating your collection:</h2>
+    <ul>
+    <% collection.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form_for collection do |p| %>
+  <%= p.hidden_field :user_id %>
+
+  <%= p.label :name %><br>
+  <%= p.text_field :name %>
+  <br><br>
+  <%= p.label :description %><br>
+  <%= p.text_area :description %>
+  <br><br>
+  <%= p.submit %>
+<% end %>
