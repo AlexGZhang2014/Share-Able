@@ -1,0 +1,8 @@
+<h1>Your Collections Feed!</h1>
+<%= button_to "Create a new collection", new_user_collection_path(@current_user), method: :get %>
+<% @collections.each do |collection| %>
+  <h4><%= link_to collection.name, collection_path(collection) %></h4>
+  <h5>Submitted by: <%= collection.user.username %></h5>
+  <p><%= collection.description %></p>
+<% end %>
+<%= button_to "Log out", logout_path %>
