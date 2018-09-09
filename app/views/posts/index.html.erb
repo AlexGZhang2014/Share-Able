@@ -1,5 +1,7 @@
 <h1>Your Posts Feed!</h1>
 <%= button_to "Create a new post", new_user_post_path(@current_user), method: :get %>
+<br>
+<%= button_to "Go to your collections feed", collections_path, method: :get %>
 <% @posts.each do |post| %>
   <h4><%= link_to post.title, post_path(post) %></h4>
   <h5>Submitted by: <%= post.user.username %></h5>
