@@ -1,0 +1,21 @@
+<% if item.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(item.errors.count, "error") %> prevented you from creating your item:</h2>
+    <ul>
+    <% item.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form_for item do |p| %>
+  <%= p.hidden_field :collection_id %>
+
+  <%= p.label :name %><br>
+  <%= p.text_field :name %>
+  <br><br>
+  <%= p.label :description %><br>
+  <%= p.text_area :description %>
+  <br><br>
+  <%= p.submit %>
+<% end %>
