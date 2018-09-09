@@ -5,6 +5,8 @@
 <h4>Submitted by: <%= @post.user.username %></h4>
 <p><%= @post.content %></p>
 <br>
+<h4>Comments</h4>
+<br>
 <% if @current_user == @post.user %>
   <%= button_to "Edit this post", { action: "edit", id: @post.id }, method: :get %>
   <br>
