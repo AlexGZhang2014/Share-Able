@@ -3,7 +3,7 @@
 <br>
 <%= button_to "Go to your posts feed", posts_path, method: :get %>
 <% @collections.each do |collection| %>
-  <h4><%= link_to collection.name, collection_path(collection) %></h4>
+  <h3><%= link_to collection.name, collection_path(collection) %></h3>
   <h5>Submitted by: <%= collection.user.username %></h5>
   <p><%= collection.description %></p>
 <% end %>
