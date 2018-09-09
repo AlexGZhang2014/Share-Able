@@ -22,9 +22,11 @@ class CollectionsController < ApplicationController
   end
 
   def show
+    @items = @collection.items
   end
 
   def edit
+    @items = @collection.items
   end
 
   def update
