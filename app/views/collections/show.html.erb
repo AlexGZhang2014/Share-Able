@@ -10,6 +10,12 @@
   <p><%= item.description %></p>
 <% end %>
 <br>
+<h3>Reviews:</h3>
+<% @reviews.each do |review| %>
+  <h4><%= review.author %> wrote:</h4>
+  <p><%= review.content %></p>
+<% end %>
+<br>
 <% if @current_user == @collection.user %>
   <%= button_to "Edit this collection", { action: "edit", id: @collection.id }, method: :get %>
   <br>
