@@ -11,6 +11,7 @@
 <% end %>
 <br>
 <h3>Reviews:</h3>
+<%= button_to "Add review", new_collection_review_path(@collection), method: :get %>
 <% @reviews.each do |review| %>
   <h4><%= review.author %> wrote:</h4>
   <p><%= review.content %></p>
