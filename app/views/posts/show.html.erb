@@ -10,6 +10,7 @@
 <% @comments.each do |comment| %>
   <h4><%= comment.author %> wrote:</h4>
   <p><%= comment.content %></p>
+  <%= button_to "Edit this comment", edit_post_comment_path(@post, comment), method: :get %>
 <% end %>
 <br><br>
 <% if @current_user == @post.user %>
