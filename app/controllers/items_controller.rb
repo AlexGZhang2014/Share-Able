@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
-    redirect_to items_path, notice: "Item was successfully deleted."
+    redirect_to edit_collection_path(@item.collection), notice: "Item was successfully deleted."
   end
 
   private
