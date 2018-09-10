@@ -11,6 +11,7 @@
   <h4><%= comment.author %> wrote:</h4>
   <p><%= comment.content %></p>
   <%= button_to "Edit this comment", edit_post_comment_path(@post, comment), method: :get %>
+  <%= button_to "Delete this comment", comment, method: :delete, data: { confirm: "Are you sure?" } %>
 <% end %>
 <br><br>
 <% if @current_user == @post.user %>
