@@ -8,11 +8,14 @@
     </ul>
   </div>
 <% end %>
-<%= form_for review do |c| %>
-  <%= c.hidden_field :collection_id %>
+<%= form_for review do |r| %>
+  <%= r.hidden_field :collection_id %>
 
-  <%= c.label :content %><br>
-  <%= c.text_field :content %>
+  <%= r.label :content %><br>
+  <%= r.text_area :content %>
   <br><br>
-  <%= c.submit %>
+  <%= r.label :rating %>
+  <%= r.number_field :rating %>
+  <br><br>
+  <%= r.submit %>
 <% end %>
