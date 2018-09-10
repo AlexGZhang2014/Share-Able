@@ -23,6 +23,7 @@ class CollectionsController < ApplicationController
 
   def show
     @items = @collection.items
+    @reviews = @collection.reviews
   end
 
   def edit
