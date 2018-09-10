@@ -30,11 +30,6 @@ class CommentsController < ApplicationController
     end
   end
 
-  def destroy
-    @comment.destroy
-    redirect_to post_path(@comment.post), notice: "Comment was successfully updated."
-  end
-
   private
 
     def comment_params
