@@ -20,6 +20,10 @@
     <p><strong><%= review.rating %> star</strong></p>
   <% end %>
   <p><%= review.content %></p>
+  <% if @current_user == review.collection.user || review.author == @current_user.username %>
+    <%= button_to "Edit this review", edit_collection_review_path(@collection, review), method: :get %>
+    <%= button_to "Delete this review", review, method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
 <% end %>
 <br>
 <% if @current_user == @collection.user %>
