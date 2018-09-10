@@ -30,6 +30,11 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @review.destroy
+    redirect_to collection_path(@review.collection), notice: "Review was successfully deleted."
+  end
+
   private
 
     def review_params
