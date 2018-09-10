@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     resources :items, only: [:new, :edit, :show]
   end
   resources :comments
-  resources :posts
+  resources :posts do
+    resources :comments, only: [:new, :edit]
+  end
   resources :users do
     resources :posts, only: [:index, :new, :edit, :show]
     resources :collections, only: [:index, :new, :edit, :show]
