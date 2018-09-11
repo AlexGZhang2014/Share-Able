@@ -2,10 +2,18 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all
-    respond_to do |format|
-      format.html { render :index }
-      format.json { render json: @posts }
+    if params[:user_id]
+      @posts = current_user.posts
+      respond_to do |format|
+        format.html { render :index }
+        format.json { render json: @posts }
+      end
+    else
+      @posts = Post.all
+      respond_to do |format|
+        format.html { render :index }
+        format.json { render json: @posts }
+      end
     end
   end
 
