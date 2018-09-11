@@ -2,7 +2,19 @@ class CollectionsController < ApplicationController
   before_action :set_collection, only: [:show, :edit, :update, :destroy]
 
   def index
-    @collections = Collection.all
+    if params[:user_id]
+      @collections = current_user.collections
+      respond_to do |format|
+        format.html { render :index }
+        format.json { render json: @collections }
+      end
+    else
+      @collections = Collection.all
+      respond_to do |format|
+        format.html { render :index }
+        format.json { render json: @collections }
+      end
+    end
   end
 
   def new
