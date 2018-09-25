@@ -86,3 +86,34 @@
    border: 5px solid #66FF33;
    padding: 40px;
  }
+
+ #show_post_page {
+   text-align: center;
+   border: 5px solid #009933;
+   padding: 20px;
+   background-color: #00CCCC;
+ }
+
+ #show_post_page h1 {
+   background-color: #00CCCC;
+ }
+
+ #show_post_page h4 {
+   background-color: #00CCCC;
+ }
+
+ #show_post_page p {
+   background-color: #00CCCC;
+ }
+
+ #show_post_page h3 {
+   background-color: #00CCCC;
+ }
+
+ #show_post_page a {
+   background-color: #00CCCC;
+ }
+
+ #show_post_page form {
+   background-color: #00CCCC;
+ }
