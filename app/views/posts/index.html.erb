@@ -1,14 +1,17 @@
-<h1>Your Posts Feed!</h1>
-<%= button_to "Create a new post", new_user_post_path(@current_user), method: :get %>
-<br>
-<%= button_to "View your posts", user_posts_path(@current_user), method: :get %>
-<br>
-<%= button_to "View all posts", posts_path, method: :get %>
-<br>
-<%= button_to "Go to your collections feed", collections_path, method: :get %>
-<% @posts.each do |post| %>
-  <h4><%= link_to post.title, post_path(post) %></h4>
-  <h5>Submitted by: <%= post.user.username %></h5>
-  <p><%= post.content %></p>
-<% end %>
-<%= button_to "Log out", logout_path %>
+<div id="post_index">
+  <h1>Your Posts Feed!</h1>
+  <div class="buttons">
+    <%= button_to "Create a new post", new_user_post_path(@current_user), method: :get %>
+    <%= button_to "View your posts", user_posts_path(@current_user), method: :get %>
+    <%= button_to "View all posts", posts_path, method: :get %>
+    <%= button_to "Go to your collections feed", collections_path, method: :get %>
+  </div>
+  <% @posts.each do |post| %>
+    <div class="post">
+      <h4><%= link_to post.title, post_path(post) %></h4>
+      <h5>Submitted by: <%= post.user.username %></h5>
+      <p><%= post.content %></p>
+    </div>
+  <% end %>
+  <%= button_to "Log out", logout_path %>
+</div>
