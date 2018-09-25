@@ -80,3 +80,9 @@
  .post p {
    background-color: #f1eec1;
  }
+
+ #new_post_form {
+   text-align: center;
+   border: 5px solid #66FF33;
+   padding: 40px;
+ }
