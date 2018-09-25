@@ -87,6 +87,12 @@
    padding: 40px;
  }
 
+ #edit_post_form {
+   text-align: center;
+   border: 5px solid #FF3366;
+   padding: 40px;
+ }
+
  #show_post_page {
    text-align: center;
    border: 5px solid #009933;
