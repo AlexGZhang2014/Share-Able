@@ -15,6 +15,10 @@
  */
 
  .field_with_errors {
+   color: red;
+ }
+
+ #error_explanation {
    border: 4px solid red;
  }
 
@@ -32,4 +36,10 @@
    text-align: center;
    border: 5px solid #ffd504;
    padding: 50px;
+ }
+
+ #signup {
+   text-align: center;
+   border: 5px solid #cd4985;
+   padding: 40px;
  }
