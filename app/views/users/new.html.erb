@@ -11,4 +11,7 @@
     </div>
   <% end %>
   <%= render partial: "form", locals: {user: @user} %>
+  <br>
+  <%= button_to "Return to the homepage", root_path, method: :get %>
+  <br>
 </div>
