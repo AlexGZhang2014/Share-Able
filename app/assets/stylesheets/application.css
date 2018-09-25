@@ -22,3 +22,14 @@
    border: 4px solid blue;
    font-weight: bold;
  }
+
+ * {
+   background-color: #1dacd6;
+   font-family: 'Raleway', sans-serif;
+ }
+
+ #welcome-page {
+   text-align: center;
+   border: 5px solid #ffd504;
+   padding: 50px;
+ }
