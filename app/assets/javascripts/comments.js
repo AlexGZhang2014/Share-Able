@@ -8,10 +8,12 @@ class Comment {
 
   static addCommentForm(e) {
     e.preventDefault();
+    let postId = $("#post_id").text();
+    $.get("/comments/")
     $("#new_comment_form").append(`
       <h1>Add a Comment</h1>
       <form class="new_comment" id="new_comment" action="/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="mrAkbYksI39GmD7MKEuvvJtNZT3gq9KfN1F36h48IAIvw7/3Mm7RM7s/diLxgkUCCUssmyTogH8XX/ZpZ7tc5w==">
-      <input type="hidden" value="2" name="comment[post_id]" id="comment_post_id">
+      <input type="hidden" value="${postId}" name="comment[post_id]" id="comment_post_id">
       <label for="comment_content">Content</label><br>
       <textarea name="comment[content]" id="comment_content"></textarea>
       <br><br>

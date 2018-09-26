@@ -2,6 +2,7 @@
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 <div id="show_post_page">
+  <div id="post_id" style="display: none;"><%= @post.id %></div>
   <h1><%= @post.title %></h1>
   <h4>Submitted by: <%= @post.user.username %></h4>
   <p><%= @post.content %></p>
