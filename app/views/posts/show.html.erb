@@ -8,6 +8,10 @@
   <br>
   <h3>Comments</h3>
   <%= button_to "Add comment", new_post_comment_path(@post), method: :get, form: { id: "add_comment" } %>
+  <div id="new_comment_form">
+    <h1>Add a Comment</h1>
+    <%= render partial: "comments/form", locals: { comment: @comment } %>
+  </div>
   <div id="post_comments">
     <% @comments.each do |comment| %>
       <h4><%= comment.author %> wrote:</h4>
