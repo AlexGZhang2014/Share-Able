@@ -154,3 +154,26 @@
  #show_post_page form {
    background-color: #00CCCC;
  }
+
+ #edit_comment_form {
+   background-color: #00CC00;
+   border: 5px solid #990033;
+   text-align: center;
+   padding: 40px;
+ }
+
+ #edit_comment_form h1 {
+   background-color: #00CC00;
+ }
+
+ #edit_comment_form form {
+   background-color: #00CC00;
+ }
+
+ #edit_comment_form form label {
+   background-color: #00CC00;
+ }
+
+ #new_comment_form form label {
+   background-color: #00CCCC;
+ }

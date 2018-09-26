@@ -17,8 +17,8 @@ class Comment {
       <br><br>
       <input id="new_comment_submit" type="submit" name="commit" value="Create Comment" data-disable-with="Create Comment">
       </form>
-      `);
-    $("#new_comment").on("submit", Comment.addNewComment)
+    `);
+    $("#new_comment").on("submit", Comment.addNewComment);
   }
 
   static addNewComment(e) {
@@ -42,7 +42,7 @@ class Comment {
   }
 
   static addJSListener() {
-    $("#add_comment").on("click", Comment.addCommentForm)
+    $("#add_comment").on("click", Comment.addCommentForm);
   }
 
   static ready() {
