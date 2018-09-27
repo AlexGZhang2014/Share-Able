@@ -204,3 +204,22 @@
  .collection a {
    background-color: #d7f4d2;
  }
+
+ #new_collection_form {
+   text-align: center;
+   border: 5px solid #F3AE09;
+   padding: 40px;
+   background-color: #99FFFF;
+ }
+
+ #new_collection_form h1 {
+   background-color: #99FFFF;
+ }
+
+ #new_collection_form form {
+   background-color: #99FFFF;
+ }
+
+ #new_collection_form form label {
+   background-color: #99FFFF;
+ }
