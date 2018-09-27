@@ -1,10 +1,14 @@
-<h1>Your Collections Feed!</h1>
-<%= button_to "Create a new collection", new_user_collection_path(@current_user), method: :get %>
-<br>
-<%= button_to "Go to your posts feed", posts_path, method: :get %>
-<% @collections.each do |collection| %>
-  <h3><%= link_to collection.name, collection_path(collection) %></h3>
-  <h5>Submitted by: <%= collection.user.username %></h5>
-  <p><%= collection.description %></p>
-<% end %>
-<%= button_to "Log out", logout_path %>
+<div id="collection_index">
+  <h1>Your Collections Feed!</h1>
+  <%= button_to "Create a new collection", new_user_collection_path(@current_user), method: :get %>
+  <br>
+  <%= button_to "Go to your posts feed", posts_path, method: :get %>
+  <% @collections.each do |collection| %>
+    <div class="collection">
+      <h3><%= link_to collection.name, collection_path(collection) %></h3>
+      <h5>Submitted by: <%= collection.user.username %></h5>
+      <p><%= collection.description %></p>
+    </div>
+  <% end %>
+  <%= button_to "Log out", logout_path %>
+</div>
