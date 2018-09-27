@@ -364,3 +364,7 @@
  #collection_edit_form div.item form {
    background-color: #99FF33;
  }
+
+ #new_item_form {
+   background-color: #F9D35C;
+ }

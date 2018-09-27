@@ -2,6 +2,7 @@
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 <div id="collection_edit_form">
+  <div id="collection_id" style="display: none;"><%= @collection.id %></div>
   <h1>Edit your collection</h1>
   <%= render partial: "form", locals: { collection: @collection } %>
   <br>
@@ -15,5 +16,6 @@
     </div>
   <% end %>
   <br>
-  <%= button_to "Add item", new_collection_item_path(@collection), method: :get %>
+  <%= button_to "Add item", new_collection_item_path(@collection), method: :get, form: { id: "add_item" } %>
+  <div id="new_item_form"></div>
 </div>
