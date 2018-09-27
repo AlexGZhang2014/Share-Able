@@ -1,15 +1,17 @@
 <% if flash[:notice] %>
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
-<h1>Edit your collection</h1>
-<%= render partial: "form", locals: { collection: @collection } %>
-<br>
-<h3>Items:</h3>
-<% @items.each do |item| %>
-  <h4><%= item.name %></h4>
-  <p><%= item.description %></p>
-  <%= button_to "Edit this item", edit_collection_item_path(@collection, item), method: :get %>
-  <%= button_to "Delete this item", item, method: :delete, data: { confirm: "Are you sure?" } %>
-<% end %>
-<br>
-<%= button_to "Add item", new_collection_item_path(@collection), method: :get %>
+<div id="collection_edit_form">
+  <h1>Edit your collection</h1>
+  <%= render partial: "form", locals: { collection: @collection } %>
+  <br>
+  <h3>Items:</h3>
+  <% @items.each do |item| %>
+    <h4><%= item.name %></h4>
+    <p><%= item.description %></p>
+    <%= button_to "Edit this item", edit_collection_item_path(@collection, item), method: :get %>
+    <%= button_to "Delete this item", item, method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+  <br>
+  <%= button_to "Add item", new_collection_item_path(@collection), method: :get %>
+</div>

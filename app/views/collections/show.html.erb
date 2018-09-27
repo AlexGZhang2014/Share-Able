@@ -1,34 +1,40 @@
 <% if flash[:notice] %>
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
-<h1><%= @collection.name %></h1>
-<h4>Submitted by: <%= @collection.user.username %></h4>
-<p><%= @collection.description %></p>
-<h3>Items:</h3>
-<% @items.each do |item| %>
-  <h4><%= item.name %></h4>
-  <p><%= item.description %></p>
-<% end %>
-<br>
-<h3>Reviews:</h3>
-<%= button_to "Add review", new_collection_review_path(@collection), method: :get %>
-<% @reviews.each do |review| %>
-  <h4><%= review.author %> wrote:</h4>
-  <% if review.rating > 1 %>
-    <p><strong><%= review.rating %> stars</strong></p>
-  <% else %>
-    <p><strong><%= review.rating %> star</strong></p>
-  <% end %>
-  <p><%= review.content %></p>
-  <% if @current_user == review.collection.user || review.author == @current_user.username %>
-    <%= button_to "Edit this review", edit_collection_review_path(@collection, review), method: :get %>
-    <%= button_to "Delete this review", review, method: :delete, data: { confirm: "Are you sure?" } %>
-  <% end %>
-<% end %>
-<br>
-<% if @current_user == @collection.user %>
-  <%= button_to "Edit this collection", { action: "edit", id: @collection.id }, method: :get %>
+<div id="show_collection_page">
+  <h1><%= @collection.name %></h1>
+  <h4>Submitted by: <%= @collection.user.username %></h4>
+  <p><%= @collection.description %></p>
+  <h3>Items:</h3>
+  <div id="collection_items">
+    <% @items.each do |item| %>
+      <h4><%= item.name %></h4>
+      <p><%= item.description %></p>
+    <% end %>
+  </div>
   <br>
-  <%= button_to "Delete this collection", { action: "destroy", id: @collection.id }, method: :delete, data: { confirm: "Are you sure?" } %>
-<% end %>
-<p><%= link_to "Click here", collections_path %> to return to your collections feed.</p>
+  <h3>Reviews:</h3>
+  <%= button_to "Add review", new_collection_review_path(@collection), method: :get %>
+  <div id="collection_reviews">
+    <% @reviews.each do |review| %>
+      <h4><%= review.author %> wrote:</h4>
+      <% if review.rating > 1 %>
+        <p><strong><%= review.rating %> stars</strong></p>
+      <% else %>
+        <p><strong><%= review.rating %> star</strong></p>
+      <% end %>
+      <p><%= review.content %></p>
+      <% if @current_user == review.collection.user || review.author == @current_user.username %>
+        <%= button_to "Edit this review", edit_collection_review_path(@collection, review), method: :get %>
+        <%= button_to "Delete this review", review, method: :delete, data: { confirm: "Are you sure?" } %>
+      <% end %>
+    <% end %>
+  </div>
+  <br>
+  <% if @current_user == @collection.user %>
+    <%= button_to "Edit this collection", { action: "edit", id: @collection.id }, method: :get %>
+    <br>
+    <%= button_to "Delete this collection", { action: "destroy", id: @collection.id }, method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+  <p><%= link_to "Click here", collections_path %> to return to your collections feed.</p>
+</div>

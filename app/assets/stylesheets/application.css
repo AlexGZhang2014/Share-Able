@@ -223,3 +223,69 @@
  #new_collection_form form label {
    background-color: #99FFFF;
  }
+
+ #show_collection_page {
+   text-align: center;
+   border: 5px solid #727211;
+   padding: 20px;
+   background-color: #33CCFF;
+ }
+
+ #show_collection_page h1 {
+   background-color: #33CCFF;
+ }
+
+ #show_collection_page div {
+   background-color: #33CCFF;
+ }
+
+ #show_collection_page h4 {
+   background-color: #33CCFF;
+ }
+
+ #show_collection_page p {
+   background-color: #33CCFF;
+ }
+
+ #show_collection_page h3 {
+   background-color: #33CCFF;
+ }
+
+ #show_collection_page a {
+   background-color: #33CCFF;
+ }
+
+ #show_collection_page form {
+   background-color: #33CCFF;
+ }
+
+ #collection_edit_form {
+   text-align: center;
+   border: 5px solid #CC66CC;
+   padding: 40px;
+   background-color: #F9D35C;
+ }
+
+ #collection_edit_form h1 {
+   background-color: #F9D35C;
+ }
+
+ #collection_edit_form h3 {
+   background-color: #F9D35C;
+ }
+
+ #collection_edit_form h4 {
+   background-color: #F9D35C;
+ }
+
+ #collection_edit_form p {
+   background-color: #F9D35C;
+ }
+
+ #collection_edit_form form {
+   background-color: #F9D35C;
+ }
+
+ #collection_edit_form label {
+   background-color: #F9D35C;
+ }
