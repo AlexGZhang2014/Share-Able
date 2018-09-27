@@ -19,17 +19,19 @@
   <%= button_to "Add review", new_collection_review_path(@collection), method: :get %>
   <div id="collection_reviews">
     <% @reviews.each do |review| %>
-      <h4><%= review.author %> wrote:</h4>
-      <% if review.rating > 1 %>
-        <p><strong><%= review.rating %> stars</strong></p>
-      <% else %>
-        <p><strong><%= review.rating %> star</strong></p>
-      <% end %>
-      <p><%= review.content %></p>
-      <% if @current_user == review.collection.user || review.author == @current_user.username %>
-        <%= button_to "Edit this review", edit_collection_review_path(@collection, review), method: :get %>
-        <%= button_to "Delete this review", review, method: :delete, data: { confirm: "Are you sure?" } %>
-      <% end %>
+      <div class="review">
+        <h4><%= review.author %> wrote:</h4>
+        <% if review.rating > 1 %>
+          <p><strong><%= review.rating %> stars</strong></p>
+        <% else %>
+          <p><strong><%= review.rating %> star</strong></p>
+        <% end %>
+        <p><%= review.content %></p>
+        <% if @current_user == review.collection.user || review.author == @current_user.username %>
+          <%= button_to "Edit this review", edit_collection_review_path(@collection, review), method: :get %>
+          <%= button_to "Delete this review", review, method: :delete, data: { confirm: "Are you sure?" } %>
+        <% end %>
+      </div>
     <% end %>
   </div>
   <br>

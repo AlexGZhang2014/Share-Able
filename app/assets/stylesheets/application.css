@@ -274,6 +274,7 @@
 
  #show_collection_page form {
    background-color: #33CCFF;
+   margin-bottom: 10px;
  }
 
  #collection_edit_form {
@@ -322,4 +323,26 @@
 
  #show_collection_page div.item p {
    background-color: #33CC99;
+ }
+
+ #show_collection_page div.review {
+   background-color: #FFCC00;
+   border: 5px solid #FF0099;
+   padding: 10px;
+ }
+
+ #show_collection_page div.review h4 {
+   background-color: #FFCC00;
+ }
+
+ #show_collection_page div.review p {
+   background-color: #FFCC00;
+ }
+
+ #show_collection_page div.review form {
+   background-color: #FFCC00;
+ }
+
+ #show_collection_page div.review p strong {
+   background-color: #FFCC00;
  }
