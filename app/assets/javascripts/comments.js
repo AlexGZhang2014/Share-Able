@@ -35,10 +35,12 @@ class Comment {
 
   createComment() {
     $("#post_comments").append(`
+      <div class="comment">
       <h4>${this.author} wrote:</h4>
       <p>${this.content}</p>
       <form class="button_to" method="get" action="/posts/${this.post.id}/comments/${this.id}/edit"><input type="submit" value="Edit this comment"></form>
       <form class="button_to" method="post" action="/comments/${this.id}"><input type="hidden" name="_method" value="delete"><input data-confirm="Are you sure?" type="submit" value="Delete this comment"><input type="hidden" name="authenticity_token" value="oFtA5/vEpgl509urgzuQeAj2K+oDvvhtVU+PjS8VpzAVKNt9QIZURYR0k0Va8nrGmvBiTMf9qo11QQ4OVpLb1Q=="></form>
+      </div>
     `);
   }
 
