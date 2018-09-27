@@ -12,12 +12,14 @@
   <div id="new_comment_form"></div>
   <div id="post_comments">
     <% @comments.each do |comment| %>
-      <h4><%= comment.author %> wrote:</h4>
-      <p><%= comment.content %></p>
-      <% if @current_user == comment.post.user || comment.author == @current_user.username %>
-        <%= button_to "Edit this comment", edit_post_comment_path(@post, comment), method: :get %>
-        <%= button_to "Delete this comment", comment, method: :delete, data: { confirm: "Are you sure?" } %>
-      <% end %>
+      <div class="comment">
+        <h4><%= comment.author %> wrote:</h4>
+        <p><%= comment.content %></p>
+        <% if @current_user == comment.post.user || comment.author == @current_user.username %>
+          <%= button_to "Edit this comment", edit_post_comment_path(@post, comment), method: :get %>
+          <%= button_to "Delete this comment", comment, method: :delete, data: { confirm: "Are you sure?" } %>
+        <% end %>
+      </div>
     <% end %>
   </div>
   <br><br>

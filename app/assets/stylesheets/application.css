@@ -132,10 +132,6 @@
    background-color: #00CCCC;
  }
 
- #show_post_page div {
-   background-color: #00CCCC;
- }
-
  #show_post_page h4 {
    background-color: #00CCCC;
  }
@@ -154,6 +150,27 @@
 
  #show_post_page form {
    background-color: #00CCCC;
+ }
+
+ #post_comments {
+   background-color: #EEFF27;
+ }
+
+ #post_comments form {
+   background-color: #EEFF27;
+ }
+
+ #post_comments h4 {
+   background-color: #EEFF27;
+ }
+
+ #post_comments p {
+   background-color: #EEFF27;
+ }
+
+ .comment {
+   border: 5px solid #6B3232;
+   background-color: #EEFF27;
  }
 
  #edit_comment_form {
