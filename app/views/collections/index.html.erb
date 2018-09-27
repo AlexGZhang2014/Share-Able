@@ -1,8 +1,11 @@
 <div id="collection_index">
   <h1>Your Collections Feed!</h1>
-  <%= button_to "Create a new collection", new_user_collection_path(@current_user), method: :get %>
-  <br>
-  <%= button_to "Go to your posts feed", posts_path, method: :get %>
+  <div class="buttons">
+    <%= button_to "Create a new collection", new_user_collection_path(@current_user), method: :get %>
+    <%= button_to "View your collections", user_collections_path(@current_user), method: :get %>
+    <%= button_to "View all collections", collections_path, method: :get %>
+    <%= button_to "Go to your posts feed", posts_path, method: :get %>
+  </div>
   <% @collections.each do |collection| %>
     <div class="collection">
       <h3><%= link_to collection.name, collection_path(collection) %></h3>
