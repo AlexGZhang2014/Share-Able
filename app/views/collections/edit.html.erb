@@ -7,10 +7,12 @@
   <br>
   <h3>Items:</h3>
   <% @items.each do |item| %>
-    <h4><%= item.name %></h4>
-    <p><%= item.description %></p>
-    <%= button_to "Edit this item", edit_collection_item_path(@collection, item), method: :get %>
-    <%= button_to "Delete this item", item, method: :delete, data: { confirm: "Are you sure?" } %>
+    <div class="item">
+      <h4><%= item.name %></h4>
+      <p><%= item.description %></p>
+      <%= button_to "Edit this item", edit_collection_item_path(@collection, item), method: :get %>
+      <%= button_to "Delete this item", item, method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
   <% end %>
   <br>
   <%= button_to "Add item", new_collection_item_path(@collection), method: :get %>

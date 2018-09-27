@@ -346,3 +346,21 @@
  #show_collection_page div.review p strong {
    background-color: #FFCC00;
  }
+
+ #collection_edit_form div.item {
+   background-color: #99FF33;
+   border: 5px solid #0033CC;
+   padding: 10px;
+ }
+
+ #collection_edit_form div.item h4 {
+   background-color: #99FF33;
+ }
+
+ #collection_edit_form div.item p {
+   background-color: #99FF33;
+ }
+
+ #collection_edit_form div.item form {
+   background-color: #99FF33;
+ }
