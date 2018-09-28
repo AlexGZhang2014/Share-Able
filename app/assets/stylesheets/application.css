@@ -396,3 +396,22 @@
  #new_review_form form label {
    background-color: #33CCFF;
  }
+
+ #edit_review_form {
+   text-align: center;
+   background-color: #FFCC99;
+   border: 5px solid #003399;
+   padding: 40px;
+ }
+
+ #edit_review_form h1 {
+   background-color: #FFCC99;
+ }
+
+ #edit_review_form form {
+   background-color: #FFCC99;
+ }
+
+ #edit_review_form form label {
+   background-color: #FFCC99;
+ }
