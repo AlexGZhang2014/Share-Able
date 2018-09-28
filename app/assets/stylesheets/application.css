@@ -150,6 +150,7 @@
 
  #show_post_page form {
    background-color: #00CCCC;
+   margin-bottom: 10px;
  }
 
  #post_comments {
