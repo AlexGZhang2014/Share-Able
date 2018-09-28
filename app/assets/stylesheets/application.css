@@ -368,3 +368,22 @@
  #new_item_form {
    background-color: #F9D35C;
  }
+
+ #edit_item_form {
+   text-align: center;
+   background-color: #CCFFFF;
+   border: 5px solid #006666;
+   padding: 40px;
+ }
+
+ #edit_item_form h1 {
+   background-color: #CCFFFF;
+ }
+
+ #edit_item_form form {
+   background-color: #CCFFFF;
+ }
+
+ #edit_item_form form label {
+   background-color: #CCFFFF;
+ }
