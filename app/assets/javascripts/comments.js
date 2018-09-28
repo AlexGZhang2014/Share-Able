@@ -1,8 +1,8 @@
 class Comment {
   constructor(attributes) {
+    this.id = attributes.id;
     this.author = attributes.author;
     this.content = attributes.content;
-    this.id = attributes.id;
     this.post = attributes.post
   }
 

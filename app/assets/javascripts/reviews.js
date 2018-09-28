@@ -4,7 +4,7 @@ class Review {
     this.author = attributes.author;
     this.content = attributes.content;
     this.rating = attributes.rating;
-    this.colleciton = attributes.collection;
+    this.collection = attributes.collection;
   }
 
   static addReviewForm(e) {
@@ -22,6 +22,29 @@ class Review {
       <br><br>
       <input type="submit" name="commit" value="Create Review" data-disable-with="Create Review">
       </form>
+    `);
+    $(".new_review").on("submit", Review.addNewReview);
+  }
+
+  static addNewReview(e) {
+    e.preventDefault();
+    let $formValues = $(this).serialize();
+    $.post("/reviews", $formValues, Review.successCreate, "json");
+  }
+
+  static successCreate(data) {
+    let review = new Review(data);
+    return review.createReview();
+  }
+
+  createReview() {
+    $("#collection_reviews").append(`
+      <div class="review">
+        <h4>${this.author} wrote:</h4>
+        <p><strong>${this.rating} stars</strong></p>
+        <p>${this.content}</p>
+        <form class="button_to" method="get" action="/collections/${this.collection.id}/reviews/${this.id}/edit"><input type="submit" value="Edit this review"></form>
+      </div>
     `);
   }
 

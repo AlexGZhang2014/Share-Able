@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require comments
 //= require items
+//= require reviews
 //= require_tree .

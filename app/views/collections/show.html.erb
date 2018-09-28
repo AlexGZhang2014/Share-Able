@@ -2,6 +2,7 @@
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 <div id="show_collection_page">
+  <div id="collection_id" style="display: none;"><%= @collection.id %></div>
   <h1><%= @collection.name %></h1>
   <h4>Submitted by: <%= @collection.user.username %></h4>
   <p><%= @collection.description %></p>
