@@ -388,3 +388,11 @@
  #edit_item_form form label {
    background-color: #CCFFFF;
  }
+
+ #new_review_form {
+   background-color: #33CCFF;
+ }
+
+ #new_review_form form label {
+   background-color: #33CCFF;
+ }

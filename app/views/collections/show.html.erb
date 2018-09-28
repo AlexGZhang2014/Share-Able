@@ -16,7 +16,8 @@
   </div>
   <br>
   <h3>Reviews:</h3>
-  <%= button_to "Add review", new_collection_review_path(@collection), method: :get %>
+  <%= button_to "Add review", new_collection_review_path(@collection), method: :get, form: { id: "add_review" } %>
+  <div id="new_review_form"></div>
   <div id="collection_reviews">
     <% @reviews.each do |review| %>
       <div class="review">
