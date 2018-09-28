@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :reviews
   resources :items
   resources :collections do
-    resources :items, only: [:new, :edit, :show]
-    resources :reviews, only: [:new, :edit, :show]
+    resources :items, only: [:new, :edit]
+    resources :reviews, only: [:new, :edit]
   end
   resources :comments
   resources :posts do

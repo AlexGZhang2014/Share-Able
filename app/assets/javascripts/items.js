@@ -42,7 +42,6 @@ class Item {
       <h4>${this.name}</h4>
       <p>${this.description}</p>
       <form class="button_to" method="get" action="/collections/${this.collection.id}/items/${this.id}/edit"><input type="submit" value="Edit this item"></form>
-      <form class="button_to" method="post" action="/items/${this.id}"><input type="hidden" name="_method" value="delete"><input data-confirm="Are you sure?" type="submit" value="Delete this item"><input type="hidden" name="authenticity_token" value="ntQauOL67Pj+OlNWyaHCqArrr0ggbVrosyNvGoMwLbIfyKHGZIrm+CVxQ24e2BFWDg/DQrKwKgUMCKsJY7Fo7g=="></form>
       </div>
     `);
   }
