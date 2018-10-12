@@ -10,57 +10,60 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180908211959) do
+ActiveRecord::Schema.define(version: 2018_09_08_211959) do
 
-  create_table "collections", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
-  create_table "comments", force: :cascade do |t|
-    t.string   "author"
-    t.string   "content"
-    t.integer  "post_id"
-    t.integer  "user_id"
+  create_table "collections", id: :serial, force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "items", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.integer  "collection_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.string   "content"
-    t.integer  "user_id"
+  create_table "comments", id: :serial, force: :cascade do |t|
+    t.string "author"
+    t.string "content"
+    t.integer "post_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "reviews", force: :cascade do |t|
-    t.string   "author"
-    t.string   "content"
-    t.integer  "rating"
-    t.integer  "collection_id"
-    t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+  create_table "items", id: :serial, force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "collection_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+  create_table "posts", id: :serial, force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", id: :serial, force: :cascade do |t|
+    t.string "author"
+    t.string "content"
+    t.integer "rating"
+    t.integer "collection_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", id: :serial, force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
