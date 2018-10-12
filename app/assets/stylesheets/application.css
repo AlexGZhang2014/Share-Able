@@ -59,6 +59,14 @@
    background-color: white;
  }
 
+ form.new_post input {
+   background-color: white;
+ }
+
+ form.new_post textarea {
+   background-color: white;
+ }
+
  #post_index {
    text-align: center;
  }
