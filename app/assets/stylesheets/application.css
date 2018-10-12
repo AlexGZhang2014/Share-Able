@@ -51,6 +51,10 @@
    padding: 40px;
  }
 
+ div#new_user form input {
+   background-color: white;
+ }
+
  div#login form input {
    background-color: white;
  }
