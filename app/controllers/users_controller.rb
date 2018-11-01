@@ -2,6 +2,9 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show]
 
   def new
+    if logged_in?
+      redirect_to posts_path
+    end
     @user = User.new
   end
 
