@@ -5,6 +5,7 @@
   <div id="post_id" style="display: none;"><%= @post.id %></div>
   <h1><%= @post.title %></h1>
   <h4>Submitted by: <%= @post.user.username %></h4>
+  <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
   <p><%= @post.content %></p>
   <br>
   <h3>Comments</h3>

@@ -10,6 +10,7 @@
     <div class="post">
       <h4><%= link_to post.title, post_path(post) %></h4>
       <h5>Submitted by: <%= post.user.username %></h5>
+      <%= image_tag(post.image.url, alt: 'Image') if post.image? %>
       <p><%= post.content %></p>
     </div>
   <% end %>
