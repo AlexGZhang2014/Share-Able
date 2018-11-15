@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
 gem "loofah", ">= 2.2.3"
+gem "rack", ">= 2.0.6"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
