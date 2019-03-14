@@ -34,6 +34,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
 gem "loofah", ">= 2.2.3"
 gem "rack", ">= 2.0.6"
+gem "actionview", ">= 5.2.2.1"
+gem "railties", ">= 5.2.2.1"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
